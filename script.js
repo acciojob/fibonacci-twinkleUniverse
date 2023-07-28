@@ -1,8 +1,14 @@
 function fibonacci(num) {
 // your code here
-	
-	if(num<=1)return num;
-	return fibonacci(num-1)+fibonacci(num-2)
+	let a=0,b=1;
+	if(num==1)return a;
+	if(num==2)return b;
+	for(let i=3;i<=num;i++){
+		let c=a+b;
+		a=b;
+		b=c;
+	}
+	return b;
 }
 console.log(fibonacci(4));
 module.exports = fibonacci;
